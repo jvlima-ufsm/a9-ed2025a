@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - uses: actions/checkout@v4
+    - name: Compila
+      run: make    
     - name: Update
       run: sudo apt update
-    - name: Compila
-      run: make
     - name: Instala valgrind
       run: sudo apt install -y valgrind
     - name: Roda testes no valgrind
