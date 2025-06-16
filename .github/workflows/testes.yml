@@ -15,9 +15,9 @@ jobs:
     - uses: actions/checkout@v4
     - name: Update
       run: sudo apt update
+    - name: Compila
+      run: make
     - name: Instala valgrind
       run: sudo apt install -y valgrind
-    - name: Compila catch
-      run: make
     - name: Roda testes no valgrind
       run: valgrind --leak-check=full ./a.out --reporter compact --success
